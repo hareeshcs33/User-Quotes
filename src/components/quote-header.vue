@@ -35,6 +35,7 @@ export default {
             console.log('QuoteSubmit');
             if(this.QuoteText) {
                 this.$emit('addQuote', this.QuoteText);
+                this.QuoteText = "";
             } else {
                 alert("No quote text");
             }

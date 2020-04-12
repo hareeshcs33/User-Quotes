@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card p-4 my-2">{{index}}:{{item}}</div>
+        <div class="card p-4 my-2">{{item}}</div>
     </div>
 </template>
 <script>

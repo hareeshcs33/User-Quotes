@@ -28,7 +28,9 @@ export default {
     data(){
         return {
             maxQuotes: 10,
-            QuotesValues: [],
+            QuotesValues: [
+                "first Quote Content goes here !!!",
+            ],
         }
     },
     methods: {
@@ -41,8 +43,10 @@ export default {
             }
         },
         deleteSingleQuote(index){
-            this.QuotesValues.splice(index, 1);
-            console.log("delete quote..");
+            if(this.QuotesValues.length > 1) {
+                this.QuotesValues.splice(index, 1);
+                console.log("delete quote..");
+            }
         }
     },
     components: {
@@ -52,3 +56,14 @@ export default {
     }
 }
 </script>
+<style>
+.card {
+    background-color: #f5d9de;
+    color: #000;
+    font-size: 27px;
+    font-family: 'Sacramento', cursive;
+}
+.card:hover {
+    background-color: #dcbbc1;
+}
+</style>
